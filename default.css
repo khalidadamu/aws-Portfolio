@@ -1,13 +1,16 @@
 :root{
-     --mainColor: #e6e6e6;
+     --mainColor: #e7e7e7;
      --secondaryColor: #fff;
 
-     --borderColor:#c1c1c1;
+     --borderColor:#757575;
 
      --mainText: black;
      --secondaryText: #4b5156;
 
      --themeDotBorder:#24292e;
+
+     --previewBg: rgba(241, 241, 241, 0.8);
+     --previewShadow: #b3b3b3;
 }
 
 html,body {
@@ -156,6 +159,8 @@ padding: 10px;
 
 .left-colum {
      grid-area: left-colum;
+     padding-top: 50px;
+     padding-bottom: 50px;
      
 
 }
@@ -165,7 +170,7 @@ padding: 10px;
      height: 200px;
      width: 200px;
      object-fit: cover;
-     border: 2px solid var(--borderColor);
+     border: 5px solid rgb(255, 255, 255);
      border-radius: 50%;
      margin-top: 2em;
 }
@@ -210,19 +215,88 @@ padding: 10px;
 }
 
 #settings-note{
-     font-size: 12px;
+     font-size: 11px;
      font-style: italic;
+     text-align: center;
 
 }
 
 .right-colum {
      grid-area: right-colum;
-  
+     display: grid;
+     align-content: center;
+
+     padding-top: 50px;
+     padding-bottom: 50px;
 
 }
+
+#preview-shadow {
+background-color: var(--previewShadow);
+width: 300px;
+height: 180px;
+padding-left: 30px;
+padding-top: 30px;
+
+}
+.preview {
+     width: 300px;
+     border: 1.5px solid #000000 ;
+     background-color: var(--previewBg);
+     padding: 15px;
+     border-radius: 2%;
+     position: relative;
+}
+
+.corner {
+     width: 7px;
+     height: 7px;
+     border-radius: 50%;
+     background-color: rgb(58, 58, 58);
+     position: absolute;
+}
+
+#corner-tl {
+     top: -5px;
+     left: -5px;
+}
+
+#corner-tr {
+     top: -5px;
+     right: -5px;
+}
+
+#corner-br {
+     bottom: -5px;
+     right: -5px;
+}
+
+#corner-bl {
+     bottom: -5px;
+     left: -5px;
+}
+
 @media screen and (max-width: 1200px) {
      .main-container {
           width: 95%;
      }
      
 }
+
+@media screen and (max-width: 800px) {
+     .intro-wrapper {
+
+          grid-template-columns: 1fr ;
+          grid-template-areas: 
+               "nav-wrapper "
+               "left-colum "
+               "right-colum"
+          ;
+     }
+
+     .right-colum {
+          justify-content: center;
+
+     }
+}
+     
