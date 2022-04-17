@@ -22,11 +22,13 @@ h1 {
      /* font-family: 'Russo One', sans-serif; */
      /* font-weight: normal; */
      font-family: 'Raleway', sans-serif;
+     font-stretch: expanded;
 }
 h2,h3,h4,h5,h6,strong {
      color: var(--mainText);
      /* font-family: 'Russo One', sans-serif; */
      font-family: 'Raleway', sans-serif;
+     font-stretch: expanded;
 }
 
 p,li,span,label,input,textarea {
@@ -34,12 +36,13 @@ p,li,span,label,input,textarea {
      /* font-family: 'Fira Code', monospace;
       */
       font-family: 'Raleway', sans-serif;
+      font-stretch: expanded;
      font-weight: bold;
 
 }
 .greeting-wrapper h1 {
      font-weight: bold;
-     text-decoration: underline;
+     /* text-decoration: underline; */
 }
 
 
@@ -67,7 +70,7 @@ ul {
      list-style: none;
 }
 h1 {
-     font-size: 85px;
+     font-size: 70px;
 }
 h2 {
      font-size: 36px;
@@ -86,6 +89,18 @@ h6 {
 .main-container {
      width: 1200px;
      margin: 0 auto;
+}
+.small-text-2 {
+     padding-bottom: 0px;
+     margin-bottom: 0px;
+     text-decoration: none;
+}
+.small-text {
+     padding-top: 0;
+     margin-top: 0;
+     text-decoration: none;
+     
+
 }
 .greeting-wrapper {
      display: grid;
